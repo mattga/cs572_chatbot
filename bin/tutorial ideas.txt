@@ -1,0 +1,30 @@
+*(1)Basic one
+*(2)add more information in database and if no match in database, just reply "I don't know"
+*(3)change all letters into capital ones and remove extra space and all the punctuations.
+remember last response for a question and give a new response for the same question
+*(4) match in a different way(similarity£ºLevenshtein Distance). If user keep saying the same thing, it should response something to complain
+*(5) use class. need more information in database. when pressing enter without input, say something. check repeatition of bot's response from user.
+*(6) startup conversation
+*(7) keyword ranking: choose the keyword with higher similarity
+*(8) Equivalent keywords: several keywords have the same responses
+*(9) Keyword transposition and template response (no other appropriate keyword can be matched)
+*(10) Keyword location concept using some extra sign in keywords
+
+(11) Considering Context
+*(12) Using Text To Speech
+//(13) use database to store keyword
+*(14) randomly select response to decrease repetition
+(15) store the user's input in a file each time the chatbot was not able to find any matching keyword for the current input (use them to update our database of keyword and responses)
+(16) saving the convers+ation logs to check weakness of our chatbot
+(17) whenever the chatbot encounters an input that has no corresponding keyword, it would prompt the user about it
+
+Algorithm:
+NO KEYWORD WAS FOUND FOR THIS INPUT, PLEASE ENTER A KEYWORD
+SO THE KEYWORD IS: (key)
+(if response is no)PLEASE REENTER THE KEYWORD (go back to step #2)
+NO RESPONSE WAS FOUND FOR THIS KEYWORD: (key) , PLEASE ENTER A RESPONSE
+SO, THE RESPONSE IS: (resp)
+(if response is no) PLEASE REENTER THE RESPONSE (go back to step #4)
+KEYWORD AND RESPONSE LEARNED SUCCESSFULLY
+IS THERE ANY OTHER KEYWORD THAT I SHOULD LEARN
+(if response is yes, otherwise continue chating): PLEASE ENTER THE KEYWORD (go back to step #2)
